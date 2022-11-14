@@ -3,12 +3,16 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import HouseList from "../list/HouseList.json";
+import close from "../assets/images/close.png";
+import open from "../assets/images/open.png";
 
 import "./HouseForm.scss";
 
 const HouseForm = () => {
   const params = useParams();
   const house = HouseList.find((h) => h.id === params.id);
+
+  // const [showMode, setShowMode] = useState(false);
 
   return (
     <div className="houseform">
@@ -43,24 +47,27 @@ const HouseForm = () => {
           <div className="houseform__body__dropdown__left">
             <div className="houseform__body__dropdown__title">
               <h2>Description</h2>
-              <div className="houseform__body__dropdown__text">
-                {house.description}
-              </div>
+              <img src={close} alt="houseform__body__dropdown__title__arrow" />
+            </div>
+            <div className="houseform__body__dropdown__text">
+              {house.description}
             </div>
           </div>
           <div className="houseform__body__dropdown__right">
             <div className="houseform__body__dropdown__title">
               <h2>Equipments</h2>
-              <div className="houseform__body__dropdown__text">
-                {house.equipments.map((equipment) => (
-                  <div
-                    className="houseform__body__dropdown__right__text__list;
+              <img src={close} alt="houseform__body__dropdown__title__arrow" />
+            </div>
+
+            <div className="houseform__body__dropdown__text">
+              {house.equipments.map((equipment) => (
+                <div
+                  className="houseform__body__dropdown__right__text__list;
                   "
-                  >
-                    {equipment}
-                  </div>
-                ))}
-              </div>
+                >
+                  {equipment}
+                </div>
+              ))}
             </div>
           </div>
         </div>
