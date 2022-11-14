@@ -5,14 +5,15 @@ import Slider from "../components/Slider";
 import HouseList from "../list/HouseList.json";
 import close from "../assets/images/close.png";
 import open from "../assets/images/open.png";
-
+import Footer from "../components/Footer";
 import "./HouseForm.scss";
 
 const HouseForm = () => {
   const params = useParams();
   const house = HouseList.find((h) => h.id === params.id);
 
-  const [showMode, setShowMode] = useState(false);
+  const [showModeLeft, setShowModeLeft] = useState(false);
+  const [showModeRight, setShowModeRight] = useState(false);
 
   return (
     <div className="houseform">
@@ -49,13 +50,13 @@ const HouseForm = () => {
               <h2>Description</h2>
               <div className="">
                 <img
-                  onClick={() => setShowMode(!showMode)}
-                  src={showMode ? open : close}
+                  onClick={() => setShowModeLeft(!showModeLeft)}
+                  src={showModeLeft ? open : close}
                   alt="houseform__body__dropdown__title__arrow__left"
                 />
               </div>
             </div>
-            {!showMode ? (
+            {!showModeLeft ? (
               <div className="houseform__body__dropdown__text">
                 {house.description}
               </div>
@@ -67,12 +68,12 @@ const HouseForm = () => {
             <div className="houseform__body__dropdown__title">
               <h2>Equipments</h2>
               <img
-                onClick={() => setShowMode(!showMode)}
-                src={showMode ? open : close}
+                onClick={() => setShowModeRight(!showModeRight)}
+                src={showModeRight ? open : close}
                 alt="houseform__body__dropdown__title__arrow"
               />{" "}
             </div>
-            {!showMode ? (
+            {!showModeRight ? (
               <div className="houseform__body__dropdown__text">
                 {house.equipments.map((equipment) => (
                   <div
@@ -89,6 +90,7 @@ const HouseForm = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

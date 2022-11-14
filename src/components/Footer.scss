@@ -1,0 +1,16 @@
+.footer {
+  display: grid;
+  place-items: center;
+  background-color: black;
+  height: 209px;
+  width: 100%;
+  padding: 30px 0 30px 0;
+  margin-top: 50px;
+
+  p {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
