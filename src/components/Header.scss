@@ -1,0 +1,20 @@
+.header {
+  max-width: 1240px;
+  margin: auto;
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .header__logo {
+    width: 180px;
+  }
+
+  .header__navigation {
+    display: flex;
+  }
+  li {
+    margin-left: 50px;
+    font-size: 24px;
+    color: var(--primary);
+  }
+}

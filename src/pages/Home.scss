@@ -1,0 +1,37 @@
+.home__tagline {
+  max-width: 1240px;
+  border-radius: 25px;
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+.home__tagline__picture {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.home__tagline__text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.home__location {
+  background-color: #f6f6f6;
+  margin: auto;
+  max-width: 1240px;
+  border-radius: 25px;
+}
+.home__location__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+}
