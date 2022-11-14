@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import homePic from "../assets/images/homePic.jpg";
 import Cards from "../components/Cards";
 import HouseList from "../list/HouseList.json";
+import Footer from "../components/Footer";
 import "./Home.scss";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
