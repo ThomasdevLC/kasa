@@ -35,6 +35,7 @@
     border-radius: 10px;
     color: white;
     background-color: var(--primary);
+    margin-bottom: 50px;
   }
 
   .houseform__body__top__host {
@@ -55,5 +56,32 @@
       margin-left: 15px;
       border-radius: 50%;
     }
+  }
+}
+
+.houseform__body__dropdown {
+  width: 582px;
+
+  .houseform__body__dropdown__left__title {
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      height: 52px;
+      border-radius: 10px;
+      padding: 13px 0px 13px 20px;
+      color: white;
+      background-color: var(--primary);
+      position: absolute;
+      width: 582px;
+    }
+  }
+  .houseform__body__dropdown__left__text {
+    font-size: 18px;
+    font-weight: 400;
+    min-height: 249px;
+    background-color: var(--gray-1);
+    border-radius: 10px;
+    padding: 80px 15px 50px 20px;
+    margin-top: -10px;
   }
 }

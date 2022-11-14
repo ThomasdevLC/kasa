@@ -39,6 +39,24 @@ const HouseForm = () => {
             </div>
           </div>
         </div>
+        <div className="houseform__body__dropdown">
+          <div className="houseform__body__dropdown__left">
+            <div className="houseform__body__dropdown__left__title">
+              <h2>Description</h2>
+              <div className="houseform__body__dropdown__left__text">
+                {house.description}
+              </div>
+            </div>
+          </div>
+          <div className="houseform__body__dropdown__right">
+            <div className="houseform__body__dropdown__right__title">
+              <h2>Description</h2>
+              <div className="houseform__body__dropdown__right__text">
+                {house.equipments}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
