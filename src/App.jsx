@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import HouseForm from "./pages/HouseForm";
+import NoPage from "./pages/NoPage";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path={`/form/:id`} element={<HouseForm />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NoPage />} />
           <Route path="/test" element={<Test />} />
         </Routes>
       </BrowserRouter>
