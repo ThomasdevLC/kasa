@@ -22,22 +22,30 @@ const Slider = ({ house }) => {
 
   return (
     <div className="slider">
-      <img
-        src={vector_left}
-        alt="fleche gauche"
-        className="slider__leftArrow"
-        onClick={prevSlide}
-      />
-      <img
-        src={vector_right}
-        alt="fleche gauche"
-        className="slider__rightArrow"
-        onClick={nextSlide}
-      />
+      {length > 1 ? (
+        <img
+          src={vector_left}
+          alt="fleche gauche"
+          className="slider__leftArrow"
+          onClick={prevSlide}
+        />
+      ) : (
+        ""
+      )}
+      {length > 1 ? (
+        <img
+          src={vector_right}
+          alt="fleche gauche"
+          className="slider__rightArrow"
+          onClick={nextSlide}
+        />
+      ) : (
+        ""
+      )}
       {slides.map((slide, index) => {
         return (
           <div
-            className={index === current ? "slideActive" : "slide"}
+            // className={index === current ? "slideActive" : "slide"}
             key={index}
           >
             {" "}
