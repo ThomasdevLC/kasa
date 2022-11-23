@@ -2,16 +2,16 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import aboutPic from "../assets/images/aboutPic.jpg";
+import "./About.scss";
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <Header />
-      <img
-        src={aboutPic}
-        alt="bord de mer"
-        className="home__tagline__picture"
-      />
+      <div className="about__top">
+        <img src={aboutPic} alt="montagnes" className="about__top__picture" />
+      </div>
+
       <Footer />
     </div>
   );

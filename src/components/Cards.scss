@@ -1,6 +1,22 @@
+.card {
+  position: relative;
+  background-color: #f6f6f6;
+}
+
 .card__picture {
   height: 340px;
   width: 340px;
   object-fit: cover;
   border-radius: 10px;
+  background-color: none;
+}
+
+.card__picture__text {
+  position: absolute;
+  color: white;
+  top: 268px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
 }

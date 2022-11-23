@@ -51,7 +51,7 @@ const HouseForm = () => {
               <div className="">
                 <img
                   onClick={() => setShowModeLeft(!showModeLeft)}
-                  src={showModeLeft ? open : close}
+                  src={showModeLeft ? close : open}
                   alt="houseform__body__dropdown__title__arrow__left"
                 />
               </div>
@@ -69,7 +69,7 @@ const HouseForm = () => {
               <h2>Equipments</h2>
               <img
                 onClick={() => setShowModeRight(!showModeRight)}
-                src={showModeRight ? open : close}
+                src={showModeRight ? close : open}
                 alt="houseform__body__dropdown__title__arrow"
               />{" "}
             </div>

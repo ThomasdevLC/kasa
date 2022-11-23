@@ -4,11 +4,12 @@ import "./Cards.scss";
 
 const Cards = ({ house }) => {
   return (
-    <div className="card">
-      <NavLink to={`/form/${house.id}`}>
+    <NavLink to={`/form/${house.id}`}>
+      <div className="card">
         <img src={house.cover} alt="photo logement" className="card__picture" />
-      </NavLink>
-    </div>
+        <p className="card__picture__text">{house.title}</p>
+      </div>
+    </NavLink>
   );
 };
 
