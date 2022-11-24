@@ -6,6 +6,7 @@ import HouseList from "../list/HouseList.json";
 import close from "../assets/images/close.png";
 import open from "../assets/images/open.png";
 import Footer from "../components/Footer";
+import StarRating from "../components/StarRating";
 import "./HouseForm.scss";
 
 const HouseForm = () => {
@@ -43,6 +44,7 @@ const HouseForm = () => {
               />
             </div>
           </div>
+          <StarRating house={house} />
         </div>
         <div className="houseform__body__dropdown">
           <div className="houseform__body__dropdown__left">
