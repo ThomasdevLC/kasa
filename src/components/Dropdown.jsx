@@ -13,12 +13,12 @@ const Dropdown = (props) => {
         <div className="dropdown__title__arrow">
           <img
             onClick={() => setShowMode(!showMode)}
-            src={showMode ? close : open}
+            src={!showMode ? close : open}
             alt="flèche"
           />
         </div>
       </div>
-      {!showMode ? <div className="dropdown__text">{props.text}</div> : ""}
+      {showMode ? <div className="dropdown__text">{props.text}</div> : ""}
     </div>
   );
 };

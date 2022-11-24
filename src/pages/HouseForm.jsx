@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import HouseList from "../list/HouseList.json";
-import close from "../assets/images/close.png";
-import open from "../assets/images/open.png";
 import Footer from "../components/Footer";
 import StarRating from "../components/StarRating";
 import Dropdown from "../components/Dropdown";
@@ -13,9 +11,6 @@ import "./HouseForm.scss";
 const HouseForm = () => {
   const params = useParams();
   const house = HouseList.find((h) => h.id === params.id);
-
-  const [showModeLeft, setShowModeLeft] = useState(false);
-  const [showModeRight, setShowModeRight] = useState(false);
 
   return (
     <div className="houseform">
