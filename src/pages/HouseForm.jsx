@@ -7,6 +7,7 @@ import close from "../assets/images/close.png";
 import open from "../assets/images/open.png";
 import Footer from "../components/Footer";
 import StarRating from "../components/StarRating";
+import Dropdown from "../components/Dropdown";
 import "./HouseForm.scss";
 
 const HouseForm = () => {
@@ -43,52 +44,24 @@ const HouseForm = () => {
                 className="houseform__body__top__host__picture"
               />
             </div>
+            <div className="houseform__body__top__rating">
+              <StarRating house={house} />
+            </div>
           </div>
-          <StarRating house={house} />
         </div>
         <div className="houseform__body__dropdown">
           <div className="houseform__body__dropdown__left">
-            <div className="houseform__body__dropdown__title">
-              <h2>Description</h2>
-              <div className="">
-                <img
-                  onClick={() => setShowModeLeft(!showModeLeft)}
-                  src={!showModeLeft ? close : open}
-                  alt="houseform__body__dropdown__title__arrow__left"
-                />
-              </div>
-            </div>
-            {showModeLeft ? (
-              <div className="houseform__body__dropdown__text">
-                {house.description}
-              </div>
-            ) : (
-              ""
-            )}
+            <Dropdown title="Description" text={house.description} />
           </div>
           <div className="houseform__body__dropdown__right">
-            <div className="houseform__body__dropdown__title">
-              <h2>Equipments</h2>
-              <img
-                onClick={() => setShowModeRight(!showModeRight)}
-                src={!showModeRight ? close : open}
-                alt="houseform__body__dropdown__title__arrow"
-              />{" "}
-            </div>
-            {showModeRight ? (
-              <div className="houseform__body__dropdown__text">
-                {house.equipments.map((equipment) => (
-                  <div
-                    className="houseform__body__dropdown__right__text__list;
-                  "
-                  >
-                    {equipment}
-                  </div>
-                ))}
-              </div>
-            ) : (
-              ""
-            )}
+            <Dropdown
+              title="Equipements"
+              text={house.equipments.map((equipment) => (
+                <div className="houseform__body__dropdown__right__text;">
+                  {equipment}
+                </div>
+              ))}
+            />
           </div>
         </div>
       </section>

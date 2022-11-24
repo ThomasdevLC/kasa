@@ -1,25 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import close from "../assets/images/close.png";
+import open from "../assets/images/open.png";
+import "./Dropdown.scss";
 
-const Dropdown = () => {
+const Dropdown = (props) => {
+  const [showMode, setShowMode] = useState(false);
+
   return (
-    <div className="dropdown__left">
-      <div className="houseform__body__dropdown__title">
-        <h2>Description</h2>
-        <div className="">
+    <div className="dropdown">
+      <div className="dropdown__title">
+        <h2> {props.title}</h2>
+        <div className="dropdown__title__arrow">
           <img
-            onClick={() => setShowModeLeft(!showModeLeft)}
-            src={showModeLeft ? close : open}
-            alt="houseform__body__dropdown__title__arrow__left"
+            onClick={() => setShowMode(!showMode)}
+            src={showMode ? close : open}
+            alt="flèche"
           />
         </div>
       </div>
-      {!showModeLeft ? (
-        <div className="houseform__body__dropdown__text">
-          {house.description}
-        </div>
-      ) : (
-        ""
-      )}
+      {!showMode ? <div className="dropdown__text">{props.text}</div> : ""}
     </div>
   );
 };
