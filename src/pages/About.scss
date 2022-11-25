@@ -6,13 +6,35 @@
   margin: auto;
   margin-bottom: 50px;
   position: relative;
+  @include mixin.lg-lt {
+    width: 90%;
+  }
+
+  @include mixin.xs {
+    width: 335px;
+    height: 111px;
+    margin-bottom: 60px;
+  }
 }
 .about__top__picture {
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
+  @include mixin.md-lt {
+    height: 200px;
+  }
+
+  @include mixin.xs {
+    margin-bottom: 60px;
+  }
 }
 .about__dropdown {
   width: 1023px;
   margin: 30px auto;
+  @include mixin.lg-lt {
+    width: 80%;
+  }
+  @include mixin.xs {
+    width: 335px;
+  }
 }

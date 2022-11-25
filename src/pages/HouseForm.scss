@@ -1,3 +1,5 @@
+@use "../assets/styles/mixins" as mixin;
+
 .houseform__slider {
   margin-bottom: 50px;
 }
@@ -5,10 +7,17 @@
 .houseform__body {
   max-width: 1240px;
   margin: auto;
+  @include mixin.lg-lt {
+    width: 90%;
+  }
 
   .houseform__body__top {
     display: flex;
     justify-content: space-between;
+
+    @include mixin.lg-lt {
+      flex-direction: column;
+    }
     h1 {
       font-weight: 500;
       font-size: 36px;
@@ -37,6 +46,21 @@
     color: white;
     background-color: var(--primary);
     margin-bottom: 50px;
+  }
+
+  .houseform__body__top__right {
+    @include mixin.lg-lt {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  .houseform__body__top__rating {
+    @include mixin.lg-lt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .houseform__body__top__host {

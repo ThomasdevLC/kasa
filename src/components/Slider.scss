@@ -1,11 +1,21 @@
+@use "../assets/styles/mixins" as mixin;
+
 .slider {
   position: relative;
   height: 415px;
-  width: 1240px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  @include mixin.lg-lt {
+    width: 90%;
+  }
+
+  @include mixin.xs {
+    width: 335px;
+    height: 111px;
+    margin-bottom: 60px;
+  }
 }
 
 .slider__slides {
@@ -20,10 +30,13 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  right: 32px;
+  right: 20%;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  @include mixin.lg-lt {
+    right: 8%;
+  }
 }
 
 .slider__leftArrow {
@@ -31,10 +44,13 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  left: 72px;
+  left: 22%;
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  @include mixin.lg-lt {
+    left: 10%;
+  }
 }
 
 // .slide {

@@ -1,8 +1,14 @@
+@use "../assets/styles/mixins" as mixin;
+
 .fullStar {
-  //   padding: 0 5px 0 5px;
   margin-left: 5px;
 }
 .emptyStar {
-  //   padding: 0 5px 0 5px;
   margin-left: 5px;
+}
+
+.redstar {
+  @include mixin.lg-lt {
+    width: 50%;
+  }
 }
