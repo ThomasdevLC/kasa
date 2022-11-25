@@ -1,3 +1,5 @@
+@use "../assets/styles/mixins" as mixin;
+
 .card {
   position: relative;
   background-color: #f6f6f6;
@@ -8,7 +10,11 @@
   width: 340px;
   object-fit: cover;
   border-radius: 10px;
-  background-color: none;
+  background-color: white;
+  @include mixin.xs {
+    width: 335px;
+    height: 255px;
+  }
 }
 
 .card__picture__text {
@@ -19,4 +25,8 @@
   font-size: 18px;
   font-weight: 500;
   margin: 0;
+
+  @include mixin.xs {
+    top: 198px;
+  }
 }

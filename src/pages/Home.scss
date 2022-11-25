@@ -1,14 +1,26 @@
+@use "../assets/styles/mixins" as mixin;
+
 .home__tagline {
   max-width: 1240px;
   border-radius: 25px;
   margin: auto;
   margin-bottom: 50px;
   position: relative;
+  @include mixin.lg-lt {
+    width: 90%;
+  }
+  @include mixin.xs {
+    width: 335px;
+    height: 111px;
+  }
 }
 .home__tagline__picture {
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
+  @include mixin.md-lt {
+    height: 200px;
+  }
 }
 .home__tagline__text {
   color: white;
@@ -19,6 +31,17 @@
   font-size: 42px;
   font-weight: 500;
   margin: 0;
+  @include mixin.lg-lt {
+    font-size: 30px;
+  }
+  @include mixin.md-lt {
+    left: 40%;
+  }
+
+  @include mixin.xs {
+    font-size: 24px;
+    top: 85%;
+  }
 }
 
 .home__location {
@@ -26,6 +49,10 @@
   margin: auto;
   max-width: 1240px;
   border-radius: 25px;
+  @include mixin.lg-lt {
+    width: 90%;
+    background-color: white;
+  }
 }
 .home__location__container {
   display: flex;
@@ -34,4 +61,8 @@
   flex-wrap: wrap;
   gap: 40px;
   padding: 50px;
+
+  @include mixin.xs {
+    gap: 20px;
+  }
 }

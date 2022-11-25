@@ -16,7 +16,7 @@ const Home = () => {
           alt="bord de mer"
           className="home__tagline__picture"
         />
-        <p className="home__tagline__text">Chez vous partout et ailleurs</p>
+        <p className="home__tagline__text">Chez vous, partout et ailleurs</p>
       </div>
       <div className="home__location">
         <div className="home__location__container">

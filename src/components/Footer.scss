@@ -1,3 +1,5 @@
+@use "../assets/styles/mixins" as mixin;
+
 .footer {
   display: grid;
   place-items: center;
@@ -7,10 +9,31 @@
   padding: 30px 0 30px 0;
   margin-top: 50px;
 
+  @include mixin.md-lt {
+    height: 180px;
+  }
+  @include mixin.xs {
+    margin-top: 0px;
+  }
+
+  .footer__logo {
+    @include mixin.md-lt {
+      width: 90px;
+    }
+    @include mixin.xs {
+      font-size: 80px;
+    }
+  }
   p {
     color: white;
     font-size: 20px;
     font-weight: 500;
     margin: 0;
+    @include mixin.md-lt {
+      font-size: 15px;
+    }
+    @include mixin.xs {
+      font-size: 12px;
+    }
   }
 }

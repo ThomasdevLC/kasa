@@ -1,3 +1,5 @@
+@use "../assets/styles/mixins" as mixin;
+
 .header {
   max-width: 1240px;
   margin: auto;
@@ -5,16 +7,83 @@
   display: flex;
   justify-content: space-between;
 
-  .header__logo {
-    width: 180px;
+  @include mixin.lg-lt {
+    width: 90%;
   }
 
-  .header__navigation {
-    display: flex;
+  @include mixin.xs {
+    width: 335px;
   }
-  li {
-    margin-left: 50px;
-    font-size: 24px;
-    color: var(--primary);
+
+  .header__logo {
+    width: 180px;
+    @include mixin.lg-lt {
+      width: 120px;
+    }
+
+    @include mixin.lg-lt {
+      width: 100px;
+    }
+
+    @include mixin.xs {
+      width: 70px;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+
+    @include mixin.xs {
+      column-gap: 20px;
+    }
+
+    @include mixin.lg-lt {
+      font-size: 100px;
+    }
+    .active {
+      position: relative;
+      ::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        background: var(--primary);
+        position: absolute;
+        border-radius: 10px;
+        bottom: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation: anim 0.3s ease forwards;
+        animation: anim 0.6s ease forwards;
+
+        @include mixin.lg-lt {
+          bottom: 15%;
+        }
+
+        @-webkit-keyframes anim {
+          to {
+            width: 100%;
+          }
+        }
+        @keyframes anim {
+          to {
+            width: 100%;
+          }
+        }
+      }
+    }
+    li {
+      font-size: 24px;
+      color: var(--primary);
+
+      @include mixin.md-lt {
+        font-size: 20px;
+      }
+
+      @include mixin.xs {
+        font-size: 12px;
+      }
+    }
   }
 }

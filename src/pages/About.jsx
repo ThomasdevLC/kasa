@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import aboutPic from "../assets/images/aboutPic.jpg";
 import Dropdown from "../components/Dropdown";
 import "./About.scss";
-// import "../components/Dropdown.scss";
 
 const About = () => {
   const aboutList = [
