@@ -14,7 +14,7 @@ const Dropdown = (props) => {
           <img
             onClick={() => setShowMode(!showMode)}
             src={!showMode ? close : open}
-            alt="flèche"
+            alt="flèche d'ouverture et fermeture "
           />
         </div>
       </div>

@@ -67,36 +67,11 @@
   justify-content: space-between;
   margin: auto;
   height: 340px;
-  .houseform__body__dropdown__title {
-    display: flex;
-    justify-content: space-between;
-    height: 52px;
-    border-radius: 10px;
-    padding: 16px 20px 13px 20px;
-    color: white;
-    background-color: var(--primary);
+
+  .houseform__body__dropdown__left {
     width: 582px;
-    position: relative;
-    h2 {
-      font-size: 18px;
-      font-weight: 500;
-    }
-    img {
-      color: white;
-      width: 26.4px;
-      height: 15.5px;
-      cursor: pointer;
-    }
   }
-  .houseform__body__dropdown__text {
-    font-size: 18px;
-    font-weight: 400;
-    min-height: 249px;
+  .houseform__body__dropdown__right {
     width: 582px;
-    background-color: var(--gray-1);
-    border-radius: 10px;
-    padding: 40px 15px 50px 20px;
-    margin-top: -10px;
-    line-height: 25px;
   }
 }

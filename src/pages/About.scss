@@ -10,3 +10,8 @@
   object-fit: cover;
   border-radius: 25px;
 }
+.about__dropdown {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
