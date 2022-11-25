@@ -32,7 +32,7 @@ const About = () => {
 
   const aboutArticles = aboutList.map((article) => {
     return (
-      <div className="dropdown__about" key={article.id}>
+      <div className="about__dropdown" key={article.id}>
         <Dropdown title={article.title} text={article.text} />
       </div>
     );
@@ -44,7 +44,7 @@ const About = () => {
       <div className="about__top">
         <img
           src={aboutPic}
-          alt="image de montagnes"
+          alt="photo de montagnes"
           className="about__top__picture"
         />
       </div>
