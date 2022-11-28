@@ -22,6 +22,10 @@
       font-weight: 500;
       font-size: 36px;
       line-height: 25px;
+      @include mixin.lg-lt {
+        font-size: 32px;
+        line-height: 35px;
+      }
     }
 
     p {
@@ -60,6 +64,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: 50%;
     }
   }
 
@@ -90,12 +95,27 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  height: 340px;
+
+  @include mixin.lg-lt {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 0 20px 0;
+  }
 
   .houseform__body__dropdown__left {
     width: 582px;
+    @include mixin.lg-lt {
+      width: 480px;
+      margin: auto;
+      width: 100%;
+    }
   }
   .houseform__body__dropdown__right {
     width: 582px;
+    @include mixin.lg-lt {
+      width: 480px;
+      margin: auto;
+      width: 100%;
+    }
   }
 }

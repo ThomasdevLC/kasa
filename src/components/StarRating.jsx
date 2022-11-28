@@ -1,6 +1,6 @@
 import React from "react";
-import redStar from "../assets/images/redStar.svg";
-import greyStar from "../assets/images/greyStar.svg";
+import redStar from "../assets/images/redStar.jpg";
+import greyStar from "../assets/images/greyStar.jpg";
 import "./StarRating.scss";
 
 const StarRating = ({ house }) => {
@@ -12,7 +12,7 @@ const StarRating = ({ house }) => {
   );
 
   return (
-    <div>
+    <div className="starContainer">
       {fullStar.slice(5 - house.rating).map((fullStar) => {
         return <span className="fullStar">{fullStar}</span>;
       })}
