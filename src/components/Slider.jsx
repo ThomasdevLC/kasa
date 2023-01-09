@@ -5,15 +5,15 @@ import "./Slider.scss";
 
 const Slider = ({ house }) => {
   const slides = house.pictures;
-  const [current, setCurrent] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
   const length = slides.length;
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setSlideIndex(slideIndex === length - 1 ? 0 : slideIndex + 1);
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
   };
 
   if (!Array.isArray(slides) || length <= 0) {
@@ -48,8 +48,7 @@ const Slider = ({ house }) => {
             // className={index === current ? "slideActive" : "slide"}
             key={index}
           >
-            {" "}
-            {index === current && (
+            {index === slideIndex && (
               <img src={slide} alt="house image" className="slider__slides" />
             )}
           </div>
