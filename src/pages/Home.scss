@@ -19,28 +19,26 @@
   object-fit: cover;
   border-radius: 25px;
   @include mixin.md-lt {
-    height: 200px;
+    height: 180px;
   }
 }
 .home__tagline__text {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 42px;
   font-weight: 500;
-  margin: 0;
+  width: 100%;
+  text-align: center;
   @include mixin.lg-lt {
     font-size: 30px;
-  }
-  @include mixin.md-lt {
-    left: 40%;
   }
 
   @include mixin.xs {
     font-size: 24px;
-    top: 85%;
+    top: 65%;
   }
 }
 

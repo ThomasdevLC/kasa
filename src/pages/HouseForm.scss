@@ -1,12 +1,19 @@
 @use "../assets/styles/mixins" as mixin;
 
+.houseform {
+  @include mixin.xs {
+    width: 335px;
+    margin: auto;
+  }
+}
+
 .houseform__slider {
-  margin-bottom: 50px;
+  position: relative;
 }
 
 .houseform__body {
   max-width: 1240px;
-  margin: auto;
+  margin: 20px auto;
   @include mixin.lg-lt {
     width: 90%;
   }
@@ -14,9 +21,14 @@
   .houseform__body__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     @include mixin.lg-lt {
       flex-direction: column;
+    }
+
+    @include mixin.xs {
+      margin-bottom: 0px;
     }
     h1 {
       font-weight: 500;
@@ -26,21 +38,35 @@
         font-size: 32px;
         line-height: 35px;
       }
+
+      @include mixin.xs {
+        font-size: 18px;
+        line-height: 15px;
+      }
     }
 
     p {
       font-weight: 500;
       font-size: 18px;
       line-height: 25px;
+
+      @include mixin.xs {
+        font-size: 14px;
+        line-height: 10px;
+      }
     }
   }
 
   .houseform__body__top__tags {
     display: flex;
+    flex-wrap: wrap;
+    @include mixin.xs {
+      row-gap: 10px;
+    }
   }
 
   .houseform__body__top__tags__text {
-    width: 120px;
+    padding: 0 20px;
     height: 25px;
     margin-right: 10px;
     text-align: center;
@@ -49,7 +75,10 @@
     border-radius: 10px;
     color: white;
     background-color: var(--primary);
-    margin-bottom: 50px;
+
+    @include mixin.xs {
+      font-size: 10px;
+    }
   }
 
   .houseform__body__top__right {
@@ -70,8 +99,7 @@
 
   .houseform__body__top__host {
     display: flex;
-    padding: 0;
-
+    justify-content: flex-end;
     p {
       width: 80px;
       padding: 10px 0px;
@@ -79,6 +107,10 @@
       font-size: 18px;
       text-align: right;
       margin: 0;
+      @include mixin.xs {
+        font-size: 12px;
+        line-height: 17px;
+      }
     }
 
     .houseform__body__top__host__picture {
@@ -86,6 +118,11 @@
       height: 64px;
       margin-left: 15px;
       border-radius: 50%;
+
+      @include mixin.xs {
+        width: 48px;
+        height: 48px;
+      }
     }
   }
 }

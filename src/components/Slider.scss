@@ -1,8 +1,6 @@
 @use "../assets/styles/mixins" as mixin;
 
 .slider {
-  position: relative;
-  height: 415px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +11,15 @@
 
   @include mixin.xs {
     width: 335px;
-    height: 111px;
-    margin-bottom: 60px;
+    height: 255px;
+  }
+}
+
+.houseform__slider {
+  position: relative;
+
+  @include mixin.xs {
+    margin-bottom: 0px;
   }
 }
 
@@ -23,6 +28,11 @@
   height: 415px;
   object-fit: cover;
   border-radius: 25px;
+
+  @include mixin.xs {
+    width: 335px;
+    height: 255px;
+  }
 }
 
 .slider__rightArrow {
@@ -30,7 +40,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  right: 20%;
+  right: 22%;
   z-index: 10;
   cursor: pointer;
   user-select: none;

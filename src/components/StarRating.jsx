@@ -13,11 +13,19 @@ const StarRating = ({ house }) => {
 
   return (
     <div className="starContainer">
-      {fullStar.slice(5 - house.rating).map((fullStar) => {
-        return <span className="fullStar">{fullStar}</span>;
+      {fullStar.slice(5 - house.rating).map((fullStar, index) => {
+        return (
+          <span key={index} className="fullStar">
+            {fullStar}
+          </span>
+        );
       })}
-      {emptyStar.slice(house.rating).map((emptyStar) => {
-        return <span className="emptyStar">{emptyStar}</span>;
+      {emptyStar.slice(house.rating).map((emptyStar, index) => {
+        return (
+          <span key={index} className="emptyStar">
+            {emptyStar}
+          </span>
+        );
       })}
     </div>
   );

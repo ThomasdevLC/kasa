@@ -23,11 +23,13 @@ const HouseForm = () => {
           <div className="houseform__body__top__left">
             <h1>{house.title}</h1>
             <p>{house.location}</p>
-            <div className="houseform__body__top__tags">
-              {house.tags.map((tag) => (
-                <div className="houseform__body__top__tags__text">{tag}</div>
+            <ul className="houseform__body__top__tags">
+              {house.tags.map((tag, index) => (
+                <li key={index} className="houseform__body__top__tags__text">
+                  {tag}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="houseform__body__top__right">
@@ -51,8 +53,11 @@ const HouseForm = () => {
           <div className="houseform__body__dropdown__right">
             <Dropdown
               title="Equipements"
-              text={house.equipments.map((equipment) => (
-                <div className="houseform__body__dropdown__right__text;">
+              text={house.equipments.map((equipment, index) => (
+                <div
+                  key={index}
+                  className="houseform__body__dropdown__right__text;"
+                >
                   {equipment}
                 </div>
               ))}
