@@ -21,40 +21,46 @@ const Slider = ({ house }) => {
   }
 
   return (
-    <div className="slider">
-      {length > 1 ? (
-        <img
-          src={vector_left}
-          alt="fleche gauche"
-          className="slider__leftArrow"
-          onClick={prevSlide}
-        />
-      ) : (
-        ""
-      )}
-      {length > 1 ? (
-        <img
-          src={vector_right}
-          alt="fleche gauche"
-          className="slider__rightArrow"
-          onClick={nextSlide}
-        />
-      ) : (
-        ""
-      )}
-      {slides.map((slide, index) => {
-        return (
-          <div
-            // className={index === current ? "slideActive" : "slide"}
-            key={index}
-          >
-            {index === slideIndex && (
-              <img src={slide} alt="house image" className="slider__slides" />
-            )}
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="slider">
+        {slides.map((slide, index) => {
+          return (
+            <div key={index}>
+              {index === slideIndex && (
+                <img src={slide} alt="house image" className="slider__slides" />
+              )}
+            </div>
+          );
+        })}
+        <div className="slider__container">
+          {length > 1 ? (
+            <>
+              <div className="previous">
+                <img
+                  src={vector_left}
+                  alt="fleche gauche"
+                  className="slider__leftArrow"
+                  onClick={prevSlide}
+                />
+              </div>
+              <div className="next">
+                <img
+                  src={vector_right}
+                  alt="fleche gauche"
+                  className="slider__rightArrow"
+                  onClick={nextSlide}
+                />
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="counter">
+          {slideIndex + 1} / {length}
+        </div>
+      </div>
+    </>
   );
 };
 
