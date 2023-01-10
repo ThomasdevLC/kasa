@@ -11,10 +11,6 @@
   @include mixin.lg-lt {
     width: 90%;
   }
-  @include mixin.xs {
-    width: 335px;
-    height: 111px;
-  }
 }
 .home__tagline__picture {
   width: 100%;
@@ -22,9 +18,6 @@
   object-fit: cover;
   border-radius: 25px;
   opacity: 0.8;
-  @include mixin.md-lt {
-    height: 180px;
-  }
 }
 .home__tagline__text {
   color: white;
