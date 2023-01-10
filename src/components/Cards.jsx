@@ -7,7 +7,9 @@ const Cards = ({ house }) => {
     <NavLink to={`/form/${house.id}`}>
       <div className="card">
         <img src={house.cover} alt="photo logement" className="card__picture" />
-        <p className="card__picture__text">{house.title}</p>
+        <div className="card__picture__text">
+          <h2 className="card__picture__text__title"> {house.title}</h2>
+        </div>
       </div>
     </NavLink>
   );

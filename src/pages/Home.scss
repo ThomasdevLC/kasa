@@ -2,10 +2,12 @@
 
 .home__tagline {
   max-width: 1240px;
+  height: 223px;
   border-radius: 25px;
   margin: auto;
   margin-bottom: 50px;
   position: relative;
+  background-color: black;
   @include mixin.lg-lt {
     width: 90%;
   }
@@ -16,8 +18,10 @@
 }
 .home__tagline__picture {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 25px;
+  opacity: 0.8;
   @include mixin.md-lt {
     height: 180px;
   }
