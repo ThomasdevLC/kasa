@@ -5,6 +5,13 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  position: relative;
+  &:hover {
+    .counter {
+      opacity: 1;
+    }
+  }
+
   @include mixin.lg-lt {
     width: 90%;
   }
@@ -15,12 +22,22 @@
   }
 }
 
-.houseform__slider {
-  position: relative;
+.slider__rightArrow {
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+}
 
-  @include mixin.xs {
-    margin-bottom: 0px;
-  }
+.slider__leftArrow {
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
 }
 
 .slider__slides {
@@ -35,34 +52,14 @@
   }
 }
 
-.slider__rightArrow {
-  height: 60px;
+.counter {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  top: 50%;
-  right: 20%;
-  transform: translateY(-50%);
-}
-
-.slider__leftArrow {
-  height: 60px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-50%);
-}
-
-.slide {
+  bottom: 8%;
+  left: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 5px;
   opacity: 0;
-}
-
-.slideActive {
-  opacity: 1;
+  transition: opacity 250ms ease-in-out;
 }

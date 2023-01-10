@@ -6,6 +6,16 @@
     margin: auto;
   }
 }
+.houseform__container {
+  max-width: 1240px;
+  margin: auto;
+  width: 100%;
+
+  @include mixin.xs {
+    width: 335px;
+    margin: auto;
+  }
+}
 
 .houseform__slider {
   position: relative;
