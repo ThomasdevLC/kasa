@@ -1,32 +1,18 @@
 @use "../assets/styles/mixins" as mixin;
 
-.houseform {
-  @include mixin.xs {
-    width: 335px;
-    margin: auto;
-  }
-}
 .houseform__container {
   max-width: 1240px;
   margin: auto;
-  width: 100%;
-
-  @include mixin.xs {
-    width: 335px;
-    margin: auto;
-  }
+  width: 90%;
+  height: 100vh;
 }
 
 .houseform__slider {
-  position: relative;
+  width: 100%;
 }
 
 .houseform__body {
-  max-width: 1240px;
   margin: 20px auto;
-  @include mixin.lg-lt {
-    width: 90%;
-  }
 
   .houseform__body__top {
     display: flex;

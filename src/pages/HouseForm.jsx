@@ -14,8 +14,8 @@ const HouseForm = () => {
 
   return (
     <div className="houseform">
+      <Header />
       <div className="houseform__container">
-        <Header />
         <div className="houseform__slider">
           <Slider house={house} />
         </div>

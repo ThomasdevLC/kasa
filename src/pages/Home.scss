@@ -1,7 +1,12 @@
 @use "../assets/styles/mixins" as mixin;
 
-.home__tagline {
+.home {
   max-width: 1240px;
+  margin: auto;
+  width: 90%;
+}
+
+.home__tagline {
   height: 223px;
   border-radius: 25px;
   margin: auto;
@@ -9,7 +14,11 @@
   position: relative;
   background-color: black;
   @include mixin.lg-lt {
-    width: 90%;
+    height: 180px;
+    margin-bottom: 40px;
+  }
+  @include mixin.xs {
+    margin-bottom: 0px;
   }
 }
 .home__tagline__picture {
@@ -17,7 +26,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .home__tagline__text {
   color: white;
@@ -29,23 +38,22 @@
   font-weight: 500;
   width: 100%;
   text-align: center;
-  @include mixin.lg-lt {
-    font-size: 30px;
-  }
 
-  @include mixin.xs {
+  @include mixin.lg-lt {
+    font-size: 35px;
+  }
+  @include mixin.sm-lt {
     font-size: 24px;
-    top: 65%;
   }
 }
 
 .home__location {
   background-color: #f6f6f6;
   margin: auto;
-  max-width: 1240px;
+  width: 100%;
   border-radius: 25px;
-  @include mixin.lg-lt {
-    width: 90%;
+  padding: 40px 0;
+  @include mixin.sm-lt {
     background-color: white;
   }
 }
@@ -54,10 +62,12 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
   gap: 40px;
-  padding: 50px;
 
-  @include mixin.xs {
+  @include mixin.md-lt {
     gap: 20px;
+    width: 95%;
   }
 }

@@ -11,24 +11,18 @@
       opacity: 1;
     }
   }
-
-  @include mixin.lg-lt {
-    width: 90%;
-  }
-
-  @include mixin.xs {
-    width: 335px;
-    height: 255px;
-  }
 }
 
 .slider__rightArrow {
   height: 30px;
   position: absolute;
   cursor: pointer;
-  top: 50%;
+  top: 51%;
   right: 2%;
   transform: translateY(-50%);
+  @include mixin.xs {
+    height: 25px;
+  }
 }
 
 .slider__leftArrow {
@@ -38,6 +32,9 @@
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
+  @include mixin.xs {
+    height: 25px;
+  }
 }
 
 .slider__slides {
@@ -47,7 +44,6 @@
   border-radius: 25px;
 
   @include mixin.xs {
-    width: 335px;
     height: 255px;
   }
 }

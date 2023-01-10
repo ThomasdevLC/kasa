@@ -6,10 +6,13 @@
   width: 340px;
   border-radius: 10px;
   overflow: hidden;
-  transition: 1s background-color;
+
+  // @include mixin.sm-lt {
+  //   width: 490px;
+  // }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
 
     img {
       transform: scale(1.06);
@@ -23,7 +26,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: 1.3s transform;
+  transition: all 1.2s;
 }
 
 .card__picture__text {

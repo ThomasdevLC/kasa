@@ -3,17 +3,16 @@
 .header {
   max-width: 1240px;
   margin: auto;
+  width: 90%;
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
 
   @include mixin.lg-lt {
-    width: 90%;
     padding: 40px 0;
   }
 
   @include mixin.xs {
-    width: 335px;
     padding: 20px 0;
   }
 

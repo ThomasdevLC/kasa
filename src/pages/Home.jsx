@@ -8,21 +8,23 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div>
       <Header />
-      <div className="home__tagline">
-        <img
-          src={homePic}
-          alt="bord de mer"
-          className="home__tagline__picture"
-        />
-        <p className="home__tagline__text">Chez vous, partout et ailleurs</p>
-      </div>
-      <div className="home__location">
-        <div className="home__location__container">
-          {HouseList.map((house) => (
-            <Cards key={house.id} house={house} />
-          ))}
+      <div className="home">
+        <div className="home__tagline">
+          <img
+            src={homePic}
+            alt="bord de mer"
+            className="home__tagline__picture"
+          />
+          <p className="home__tagline__text">Chez vous, partout et ailleurs</p>
+        </div>
+        <div className="home__location">
+          <div className="home__location__container">
+            {HouseList.map((house) => (
+              <Cards key={house.id} house={house} />
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
