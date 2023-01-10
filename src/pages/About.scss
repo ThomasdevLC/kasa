@@ -1,40 +1,43 @@
 @use "../assets/styles/mixins" as mixin;
 
-.about__top {
+.about {
   max-width: 1240px;
-  border-radius: 25px;
   margin: auto;
-  margin-bottom: 50px;
-  position: relative;
-  @include mixin.lg-lt {
-    width: 90%;
-  }
+  width: 90%;
+  min-height: 100vh;
+}
 
+.about__top {
+  border-radius: 25px;
+  margin: 0 auto 100px;
+  height: 160px;
+  @include mixin.lg-lt {
+    height: 130px;
+    margin: 0 auto 80px;
+  }
   @include mixin.xs {
-    width: 335px;
-    height: 111px;
-    margin-bottom: 60px;
+    height: 130px;
+    margin: 0 auto 50px;
   }
 }
 .about__top__picture {
-  width: 100%;
   object-fit: cover;
   border-radius: 25px;
   @include mixin.md-lt {
-    height: 200px;
-  }
-
-  @include mixin.xs {
-    margin-bottom: 60px;
+    height: 160px;
   }
 }
 .about__dropdown {
-  width: 1023px;
-  margin: 30px auto;
-  @include mixin.lg-lt {
-    width: 80%;
-  }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding-bottom: 50px;
   @include mixin.xs {
-    width: 335px;
+    gap: 15px;
   }
+}
+.about__dropdown__content {
+  width: 100%;
 }

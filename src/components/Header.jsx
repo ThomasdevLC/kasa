@@ -5,7 +5,7 @@ import "./Header.scss";
 
 const Header = () => {
   return (
-    <div className="header br">
+    <div className="header ">
       <img src={logo_r} alt="logo Kaza" className="header__logo" />
 
       <ul className="header__nav">

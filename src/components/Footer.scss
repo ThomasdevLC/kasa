@@ -7,7 +7,7 @@
   height: 209px;
   width: 100%;
   padding: 30px 0 30px 0;
-  margin-top: 50px;
+  margin-top: auto;
 
   @include mixin.md-lt {
     height: 180px;

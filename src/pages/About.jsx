@@ -31,25 +31,27 @@ const About = () => {
 
   const aboutArticles = aboutList.map((article) => {
     return (
-      <div className="about__dropdown" key={article.id}>
+      <div className="about__dropdown__content" key={article.id}>
         <Dropdown title={article.title} text={article.text} />
       </div>
     );
   });
 
   return (
-    <div className="about">
+    <>
       <Header />
-      <div className="about__top">
-        <img
-          src={aboutPic}
-          alt="photo de montagnes"
-          className="about__top__picture"
-        />
+      <div className="about">
+        <div className="about__top">
+          <img
+            src={aboutPic}
+            alt="photo de montagnes"
+            className="about__top__picture"
+          />
+        </div>
+        <div className="about__dropdown">{aboutArticles}</div>
       </div>
-      {aboutArticles}
       <Footer />
-    </div>
+    </>
   );
 };
 
