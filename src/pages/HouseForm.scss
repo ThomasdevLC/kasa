@@ -12,10 +12,10 @@
     width: 100%;
   }
 
-  .houseform__body {
+  &__body {
     margin: 20px auto;
 
-    .houseform__body__top {
+    &__top {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
@@ -52,104 +52,106 @@
           line-height: 10px;
         }
       }
+
+      &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        @include mixin.xs {
+          row-gap: 10px;
+        }
+
+        &__text {
+          padding: 0 20px;
+          height: 25px;
+          margin-right: 10px;
+          text-align: center;
+          line-height: 25px;
+          font-size: 14px;
+          border-radius: 10px;
+          color: white;
+          background-color: var(--primary);
+
+          @include mixin.xs {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &__right {
+        @include mixin.lg-lt {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+      }
+
+      &__host {
+        display: flex;
+        justify-content: flex-end;
+        p {
+          width: 80px;
+          padding: 10px 0px;
+          font-weight: 500;
+          font-size: 18px;
+          text-align: right;
+          margin: 0;
+          @include mixin.xs {
+            font-size: 12px;
+            line-height: 17px;
+          }
+        }
+
+        &__picture {
+          width: 64px;
+          height: 64px;
+          margin-left: 15px;
+          border-radius: 50%;
+
+          @include mixin.xs {
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+
+      &__rating {
+        @include mixin.lg-lt {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+        }
+      }
     }
 
-    .houseform__body__top__tags {
+    &__dropdown {
       display: flex;
-      flex-wrap: wrap;
-      @include mixin.xs {
-        row-gap: 10px;
-      }
-    }
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
 
-    .houseform__body__top__tags__text {
-      padding: 0 20px;
-      height: 25px;
-      margin-right: 10px;
-      text-align: center;
-      line-height: 25px;
-      font-size: 14px;
-      border-radius: 10px;
-      color: white;
-      background-color: var(--primary);
-
-      @include mixin.xs {
-        font-size: 10px;
-      }
-    }
-
-    .houseform__body__top__right {
       @include mixin.lg-lt {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-      }
-    }
-    .houseform__body__top__rating {
-      @include mixin.lg-lt {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        width: 50%;
+        row-gap: 20px;
+        padding: 20px 0 20px 0;
       }
-    }
 
-    .houseform__body__top__host {
-      display: flex;
-      justify-content: flex-end;
-      p {
-        width: 80px;
-        padding: 10px 0px;
-        font-weight: 500;
-        font-size: 18px;
-        text-align: right;
-        margin: 0;
-        @include mixin.xs {
-          font-size: 12px;
-          line-height: 17px;
+      &__left {
+        width: 582px;
+        @include mixin.lg-lt {
+          width: 480px;
+          margin: auto;
+          width: 100%;
         }
       }
 
-      .houseform__body__top__host__picture {
-        width: 64px;
-        height: 64px;
-        margin-left: 15px;
-        border-radius: 50%;
-
-        @include mixin.xs {
-          width: 48px;
-          height: 48px;
+      &__right {
+        width: 582px;
+        @include mixin.lg-lt {
+          width: 480px;
+          margin: auto;
+          width: 100%;
         }
-      }
-    }
-  }
-
-  .houseform__body__dropdown {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-
-    @include mixin.lg-lt {
-      flex-direction: column;
-      row-gap: 20px;
-      padding: 20px 0 20px 0;
-    }
-
-    .houseform__body__dropdown__left {
-      width: 582px;
-      @include mixin.lg-lt {
-        width: 480px;
-        margin: auto;
-        width: 100%;
-      }
-    }
-    .houseform__body__dropdown__right {
-      width: 582px;
-      @include mixin.lg-lt {
-        width: 480px;
-        margin: auto;
-        width: 100%;
       }
     }
   }
