@@ -1,19 +1,23 @@
-.error__title {
-  font-weight: bold;
-  font-size: 288px;
-  text-align: center;
-  margin-top: 180px;
-  margin-bottom: 66px;
-}
-.error__text {
-  font-weight: medium;
-  font-size: 36px;
-  text-align: center;
-}
-.error__link {
-  font-weight: medium;
-  font-size: 18px;
-  text-align: center;
-  color: var(--primary);
-  text-decoration: underline;
+.error {
+  &__title {
+    font-weight: bold;
+    font-size: 288px;
+    text-align: center;
+    margin-top: 180px;
+    margin-bottom: 66px;
+  }
+
+  &__text {
+    font-weight: medium;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &__link {
+    font-weight: medium;
+    font-size: 18px;
+    text-align: center;
+    color: var(--primary);
+    text-decoration: underline;
+  }
 }

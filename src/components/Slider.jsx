@@ -32,30 +32,28 @@ const Slider = ({ house }) => {
             </div>
           );
         })}
-        <div className="slider__container">
-          {length > 1 ? (
-            <>
-              <div className="previous">
-                <img
-                  src={vector_left}
-                  alt="fleche gauche"
-                  className="slider__leftArrow"
-                  onClick={prevSlide}
-                />
-              </div>
-              <div className="next">
-                <img
-                  src={vector_right}
-                  alt="fleche gauche"
-                  className="slider__rightArrow"
-                  onClick={nextSlide}
-                />
-              </div>
-            </>
-          ) : (
-            ""
-          )}
-        </div>
+        {length > 1 ? (
+          <>
+            <div className="previous">
+              <img
+                src={vector_left}
+                alt="fleche gauche"
+                className="slider__leftArrow"
+                onClick={prevSlide}
+              />
+            </div>
+            <div className="next">
+              <img
+                src={vector_right}
+                alt="fleche gauche"
+                className="slider__rightArrow"
+                onClick={nextSlide}
+              />
+            </div>
+          </>
+        ) : (
+          ""
+        )}
         <div className="counter">
           {slideIndex + 1} / {length}
         </div>

@@ -16,7 +16,7 @@
     margin-top: 0px;
   }
 
-  .footer__logo {
+  &__logo {
     @include mixin.md-lt {
       width: 90px;
     }

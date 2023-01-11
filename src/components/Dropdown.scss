@@ -14,58 +14,59 @@
 
 .dropdown {
   width: 100%;
-}
 
-.dropdown__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 52px;
-  border-radius: 10px;
-  padding: 0px 20px;
-  color: white;
-  background-color: var(--primary);
-  position: relative;
-  z-index: 1;
-
-  @include mixin.xs {
-    height: 30px;
-    padding: 0px 12px;
-  }
-
-  h2 {
-    font-size: 18px;
-    font-weight: 500;
-    @include mixin.xs {
-      font-size: 13px;
-    }
-  }
-  img {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    border-radius: 10px;
+    padding: 0px 20px;
     color: white;
-    width: 26.4px;
-    height: 15.5px;
-    cursor: pointer;
+    background-color: var(--primary);
+    position: relative;
+    z-index: 1;
 
     @include mixin.xs {
-      width: 18px;
-      height: 12px;
+      height: 30px;
+      padding: 0px 12px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      @include mixin.xs {
+        font-size: 13px;
+      }
+    }
+    img {
+      color: white;
+      width: 26.4px;
+      height: 15.5px;
+      cursor: pointer;
+
+      @include mixin.xs {
+        width: 18px;
+        height: 12px;
+      }
     }
   }
-}
-.dropdown__text {
-  font-size: 18px;
-  font-weight: 400;
-  background-color: var(--gray-1);
-  border-radius: 10px;
-  padding: 40px 15px 50px 20px;
-  margin-top: -10px;
-  line-height: 25px;
-  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  z-index: 0;
 
-  @include mixin.xs {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 25px 20px;
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--gray-1);
+    border-radius: 10px;
+    padding: 40px 15px 50px 20px;
+    margin-top: -10px;
+    line-height: 25px;
+    animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    z-index: 0;
+
+    @include mixin.xs {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 25px 20px;
+    }
   }
 }
