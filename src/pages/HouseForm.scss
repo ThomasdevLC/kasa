@@ -78,6 +78,9 @@
       }
 
       &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         @include mixin.lg-lt {
           display: flex;
           flex-direction: row-reverse;

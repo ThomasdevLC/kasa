@@ -54,6 +54,7 @@ const Slider = ({ house }) => {
         ) : (
           ""
         )}
+
         <div className="counter">
           {slideIndex + 1} / {length}
         </div>
