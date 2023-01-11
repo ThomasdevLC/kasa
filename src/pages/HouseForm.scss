@@ -1,154 +1,156 @@
 @use "../assets/styles/mixins" as mixin;
 
-.houseform__container {
-  max-width: 1240px;
-  margin: auto;
-  width: 90%;
-  min-height: 100vh;
-}
-
-.houseform__slider {
-  width: 100%;
-}
-
-.houseform__body {
-  margin: 20px auto;
-
-  .houseform__body__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-
-    @include mixin.lg-lt {
-      flex-direction: column;
-    }
-
-    @include mixin.xs {
-      margin-bottom: 0px;
-    }
-    h1 {
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 25px;
-      @include mixin.lg-lt {
-        font-size: 32px;
-        line-height: 35px;
-      }
-
-      @include mixin.xs {
-        font-size: 18px;
-        line-height: 15px;
-      }
-    }
-
-    p {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 25px;
-
-      @include mixin.xs {
-        font-size: 14px;
-        line-height: 10px;
-      }
-    }
+.houseform {
+  &__container {
+    max-width: 1240px;
+    margin: auto;
+    width: 90%;
+    min-height: 100vh;
   }
 
-  .houseform__body__top__tags {
-    display: flex;
-    flex-wrap: wrap;
-    @include mixin.xs {
-      row-gap: 10px;
-    }
+  &__slider {
+    width: 100%;
   }
 
-  .houseform__body__top__tags__text {
-    padding: 0 20px;
-    height: 25px;
-    margin-right: 10px;
-    text-align: center;
-    line-height: 25px;
-    font-size: 14px;
-    border-radius: 10px;
-    color: white;
-    background-color: var(--primary);
+  .houseform__body {
+    margin: 20px auto;
 
-    @include mixin.xs {
-      font-size: 10px;
-    }
-  }
-
-  .houseform__body__top__right {
-    @include mixin.lg-lt {
+    .houseform__body__top {
       display: flex;
-      flex-direction: row-reverse;
       justify-content: space-between;
+      margin-bottom: 20px;
+
+      @include mixin.lg-lt {
+        flex-direction: column;
+      }
+
+      @include mixin.xs {
+        margin-bottom: 0px;
+      }
+      h1 {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 25px;
+        @include mixin.lg-lt {
+          font-size: 32px;
+          line-height: 35px;
+        }
+
+        @include mixin.xs {
+          font-size: 18px;
+          line-height: 15px;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+
+        @include mixin.xs {
+          font-size: 14px;
+          line-height: 10px;
+        }
+      }
     }
-  }
-  .houseform__body__top__rating {
-    @include mixin.lg-lt {
+
+    .houseform__body__top__tags {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 50%;
+      flex-wrap: wrap;
+      @include mixin.xs {
+        row-gap: 10px;
+      }
+    }
+
+    .houseform__body__top__tags__text {
+      padding: 0 20px;
+      height: 25px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 25px;
+      font-size: 14px;
+      border-radius: 10px;
+      color: white;
+      background-color: var(--primary);
+
+      @include mixin.xs {
+        font-size: 10px;
+      }
+    }
+
+    .houseform__body__top__right {
+      @include mixin.lg-lt {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+    .houseform__body__top__rating {
+      @include mixin.lg-lt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+      }
+    }
+
+    .houseform__body__top__host {
+      display: flex;
+      justify-content: flex-end;
+      p {
+        width: 80px;
+        padding: 10px 0px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: right;
+        margin: 0;
+        @include mixin.xs {
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+
+      .houseform__body__top__host__picture {
+        width: 64px;
+        height: 64px;
+        margin-left: 15px;
+        border-radius: 50%;
+
+        @include mixin.xs {
+          width: 48px;
+          height: 48px;
+        }
+      }
     }
   }
 
-  .houseform__body__top__host {
+  .houseform__body__dropdown {
     display: flex;
-    justify-content: flex-end;
-    p {
-      width: 80px;
-      padding: 10px 0px;
-      font-weight: 500;
-      font-size: 18px;
-      text-align: right;
-      margin: 0;
-      @include mixin.xs {
-        font-size: 12px;
-        line-height: 17px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+
+    @include mixin.lg-lt {
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 20px 0 20px 0;
+    }
+
+    .houseform__body__dropdown__left {
+      width: 582px;
+      @include mixin.lg-lt {
+        width: 480px;
+        margin: auto;
+        width: 100%;
       }
     }
-
-    .houseform__body__top__host__picture {
-      width: 64px;
-      height: 64px;
-      margin-left: 15px;
-      border-radius: 50%;
-
-      @include mixin.xs {
-        width: 48px;
-        height: 48px;
+    .houseform__body__dropdown__right {
+      width: 582px;
+      @include mixin.lg-lt {
+        width: 480px;
+        margin: auto;
+        width: 100%;
       }
-    }
-  }
-}
-
-.houseform__body__dropdown {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: auto;
-
-  @include mixin.lg-lt {
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 20px 0 20px 0;
-  }
-
-  .houseform__body__dropdown__left {
-    width: 582px;
-    @include mixin.lg-lt {
-      width: 480px;
-      margin: auto;
-      width: 100%;
-    }
-  }
-  .houseform__body__dropdown__right {
-    width: 582px;
-    @include mixin.lg-lt {
-      width: 480px;
-      margin: auto;
-      width: 100%;
     }
   }
 }
