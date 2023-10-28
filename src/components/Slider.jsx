@@ -24,31 +24,15 @@ const Slider = ({ house }) => {
     <>
       <div className="slider">
         {slides.map((slide, index) => {
-          return (
-            <div key={index}>
-              {index === slideIndex && (
-                <img src={slide} alt="house image" className="slider__slides" />
-              )}
-            </div>
-          );
+          return <div key={index}>{index === slideIndex && <img src={slide} alt="house image" className="slider__slides" />}</div>;
         })}
         {length > 1 ? (
           <>
             <div className="previous">
-              <img
-                src={vector_left}
-                alt="fleche gauche"
-                className="slider__leftArrow"
-                onClick={prevSlide}
-              />
+              <img src={vector_left} alt="fleche gauche" className="slider__leftArrow" onClick={prevSlide} />
             </div>
             <div className="next">
-              <img
-                src={vector_right}
-                alt="fleche gauche"
-                className="slider__rightArrow"
-                onClick={nextSlide}
-              />
+              <img src={vector_right} alt="fleche gauche" className="slider__rightArrow" onClick={nextSlide} />
             </div>
           </>
         ) : (
